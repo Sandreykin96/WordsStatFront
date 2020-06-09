@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Upload from './FileUpload';
 import Graphics from './Graphics';
+import Words from './Words';
 
 function App(props) {
   const addMessage = props.addMessage;
@@ -17,6 +18,7 @@ function App(props) {
       </header> 
        <Upload addMessage={addMessage}/>
        <Graphics symbolsAndCount = {symbolsAndCount}/>
+       <Words wordsAndCount = {wordsAndCount}/>
     </div>
   );
 }
