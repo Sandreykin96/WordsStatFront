@@ -14,7 +14,6 @@ import "./Charts.css";
 const Graphics = (props) => {
   console.log("infos");
   const infos = props.symbolsAndCount;
-  console.log(infos);
   const data = [];
   Object.entries(infos).map((key, value) => {
     let dt = {
@@ -24,11 +23,9 @@ const Graphics = (props) => {
     data.push(dt);
   });
 
-  console.log("datas");
-  console.log(data);
   return (
     <div className="Charts">
-      <h2>Symbols</h2>
+      <h2>Symbols/Frequency</h2>
       <div className="Chart-Content">
         <BarChart
           width={1400}

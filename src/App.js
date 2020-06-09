@@ -8,17 +8,22 @@ function App(props) {
   const addMessage = props.addMessage;
   const symbolsAndCount = props.symbolsAndCount;
   const wordsAndCount = props.wordsAndCount;
-
+  const Sentences = props.Sentences;
   return (
     <div className="App">
       <header className="App-header">
         <div>
-          Text analyse
+          Text analyses
         </div>
-      </header> 
-       <Upload addMessage={addMessage}/>
-       <Graphics symbolsAndCount = {symbolsAndCount}/>
-       <Words wordsAndCount = {wordsAndCount}/>
+      </header>
+      <Upload addMessage={addMessage} />
+      <Graphics symbolsAndCount={symbolsAndCount} />
+      <div className='App-text'>
+        <div>
+          Sentences count = {Sentences.length}
+        </div>
+      </div>
+      <Words wordsAndCount={wordsAndCount} />
     </div>
   );
 }

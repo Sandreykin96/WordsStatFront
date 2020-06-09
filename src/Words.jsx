@@ -19,7 +19,7 @@ const Words = (props) => {
 
   return (
     <div className="Words">
-      <h2>Words</h2>
+      <h2>Words/Frequency</h2>
       {messageElements}
     </div>
   );
