@@ -4,15 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-let wordsAndCount = new Object();
-let symbolsAndCount = new Object();
-let Sentences = new Object();
+let wordsAndCount = [];
+let symbolsAndCount = [];
 
 let addMessage =(data) =>{
   wordsAndCount = data.wordsAndCount;
   symbolsAndCount = data.symbolsAndCount;
-  Sentences = data.sentences;
-  debugger;
   renderTree();
 };
 
@@ -21,9 +18,7 @@ const renderTree = () =>{
   <React.StrictMode>
     <App addMessage = {addMessage} 
     wordsAndCount ={wordsAndCount} 
-    symbolsAndCount = {symbolsAndCount}
-    Sentences = {Sentences}
-    />
+    symbolsAndCount = {symbolsAndCount}/>
   </React.StrictMode>,
   document.getElementById('root'));
 };

@@ -1,13 +1,11 @@
-.Words {
+.Charts {
   background-color: #282c34;
-  min-height: 300px;
+  min-height: 100px;
   margin-left: auto;
   margin-right: auto;
   color: rgb(129, 145, 233);
-  border-style: solid;
-
-  
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }

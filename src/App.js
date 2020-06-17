@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.css';
-import Upload from './FileUpload';
-import Graphics from './Graphics';
-import Words from './Words';
+import Upload from './Components/FileUpload/FileUpload';
+import Graphics from './Components/Graphics/Graphics';
+import Words from './Components/Words/Words';
 
 function App(props) {
   const addMessage = props.addMessage;
   const symbolsAndCount = props.symbolsAndCount;
   const wordsAndCount = props.wordsAndCount;
-  const Sentences = props.Sentences;
   return (
     <div className="App">
       <header className="App-header">
@@ -18,11 +17,6 @@ function App(props) {
       </header>
       <Upload addMessage={addMessage} />
       <Graphics symbolsAndCount={symbolsAndCount} />
-      <div className='App-text'>
-        <div>
-          Sentences count = {Sentences.length}
-        </div>
-      </div>
       <Words wordsAndCount={wordsAndCount} />
     </div>
   );

@@ -3,9 +3,7 @@ import './Message.css';
 
 const Message = (props) => {
   return <div className = "Message">
-      <p>
-          {props.message}
-      </p>     
+      <p>{props.message}</p>     
       </div>;
 };
 

@@ -1,18 +1,8 @@
 import React from "react";
-import {
-  BarChart,
-  Bar,
-  Cell,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from "recharts";
-
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import "./Charts.css";
+
 const Graphics = (props) => {
-  console.log("infos");
   const infos = props.symbolsAndCount;
   const data = [];
   Object.entries(infos).map((key, value) => {
@@ -21,6 +11,7 @@ const Graphics = (props) => {
       amount: key[1],
     };
     data.push(dt);
+    return 0;
   });
 
   return (
@@ -31,13 +22,7 @@ const Graphics = (props) => {
           width={1400}
           height={500}
           data={data}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
+          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
